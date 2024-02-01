@@ -26,22 +26,17 @@ final class AllNotesViewModel {
     }
     
     // MARK: - Inits
-
     init(service: NotesServiceable) {
         self.service = service
-    }
-    
-    deinit {
-        print("deinit AllNotesViewModel")
     }
     
     // MARK: - Methods
     
    private func loadSampleData() -> [Note] {
        let attributes: [NSAttributedString.Key: Any] = [
-           .font: UIFont.systemFont(ofSize: 17)
+           .font: UIFont(name: "Avenir Next Regular", size: 18) ?? UIFont.systemFont(ofSize: 17),
        ]
-        let text = "In the back of Södermalm design shop Esteriör, Cafériör is set to become Stockholm's new bagel destination. The space features HAY’s colourful Rey chairs, Tableware like the Sobremesa Collection and Rim glasses, storage accessories like the HAY Colour Crate and Tin By Sowden, and functional furniture like the Arcs Trolley."
+        let text = "In the back of Södermalm design shop Esteriör, Cafériör is set to become Stockholm's new bagel destination. The space features HAY’s colourful Rey chairs, Tableware like the Sobremesa Collection and Rim glasses, storage accessories like the HAY Colour Crate and Tin By Sowden, and functional furniture like the Arcs Trolley. \n \n "
         let attributedString = NSMutableAttributedString(string: text, attributes: attributes)
        
        let imageAttachment = NSTextAttachment()

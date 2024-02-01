@@ -25,12 +25,6 @@ final class DetailNoteViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    deinit {
-        print("NoteViewController deinit")
-    }
-    
-    
     // MARK: - Cycle
     
     override func loadView() {
@@ -146,10 +140,10 @@ extension DetailNoteViewController: UIImagePickerControllerDelegate, UINavigatio
     
     func addPhoto(with image: UIImage) {
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 17)
+            .font: UIFont(name: "Avenir Next Regular", size: 18) ?? UIFont.systemFont(ofSize: 17)
         ]
         
-        let newString = NSMutableAttributedString(string: "", attributes: attributes)
+        let newString = NSMutableAttributedString(string: "\n", attributes: attributes)
         
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = image

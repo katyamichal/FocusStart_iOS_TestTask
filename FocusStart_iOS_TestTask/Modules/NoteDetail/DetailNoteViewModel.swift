@@ -22,10 +22,6 @@ final class DetailNoteViewModel {
         self.note = note
     }
     
-    deinit {
-        print("DetailNoteViewModel deinit")
-    }
-    
     // MARK: - Public
     public func saveNote(_ attributedString: NSAttributedString) {
             

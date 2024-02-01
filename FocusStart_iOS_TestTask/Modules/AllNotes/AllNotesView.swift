@@ -33,10 +33,6 @@ final class AllNotesView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        print("AllNotesView deinit")
-    }
-    
     // MARK: - UI Elements
     
     lazy var tableView: UITableView = {

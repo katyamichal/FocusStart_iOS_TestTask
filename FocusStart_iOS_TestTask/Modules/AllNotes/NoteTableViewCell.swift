@@ -21,11 +21,7 @@ final class NoteTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    deinit {
-        print("NoteTableViewCell deinit")
-    }
-    
+
     // MARK: - UI Elements
     
     private let containerView: UIView = {
